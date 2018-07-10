@@ -11,7 +11,7 @@
     export default {
         // title is the specific value of the check (i.e. label)
         // category is the type of the check
-        props: ['title', 'category'],
+        props: [ 'title', 'category' ],
         data() {
             return {
                 checked: false
@@ -20,7 +20,7 @@
         methods: {
             checkFilter() {
                 this.checked = !this.checked;
-                this.$emit('check-filter', this.category, this.title, this.checked); // emit to movie filter
+                this.$bus.$emit('check-filter', this.category, this.title, this.checked); // emit to movie filter
             }
         }
     }
