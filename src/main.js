@@ -25,6 +25,9 @@ Vue.use(VueRouter); // bound to this.$route
 import routes from './util/routes';
 const router = new VueRouter({ routes });
 
+import Tooltip from './util/tooltip';
+Vue.use(Tooltip);
+
 new Vue({
     el: '#app',
     data: {
